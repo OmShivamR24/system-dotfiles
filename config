@@ -159,9 +159,12 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
-        # position top OR bottom
-
+        # i3status 
+        #status_command i3status
+        #position bottom
+        #status_command i3status
+        status_command i3blocks
+        #position top 
 }
 
 # Key binding to lock screen 
@@ -209,4 +212,12 @@ bindsym XF86AudioPrev exec playerctl previous
 # 2. Pick Your Device and type xinput list-props "Device_name"
 # 3. Check the features you want to toggle and type xinput set-prop "Device_name" "feature_name" <value> ( omit the <> )
 exec_always sudo xinput set-prop "SYNA7DB5:01 06CB:CD41 Touchpad" "libinput Tapping Enabled" 1
+
+# Print Screen | Screenshot 
+# Multi-screen screenshots with scrot
+bindsym --release Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # All screens
+
+# OSX-like area selection screenshots
+# scrot -s enables to interactively select area for taking snapshots
+bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # Area selection
 
