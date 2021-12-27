@@ -160,6 +160,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        # position top OR bottom
+
 }
 
 # Key binding to lock screen 
@@ -190,7 +192,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 #     synclient TouchpadOff=0 ;
 # fi
 # 
-#
+
 bindsym XF86TouchpadToggle exec ~/.config/i3/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
@@ -200,3 +202,11 @@ bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+# to enable tapping gestures in i3wm 
+# to get Device Name and features 
+# 1. type xinput and press Enter.
+# 2. Pick Your Device and type xinput list-props "Device_name"
+# 3. Check the features you want to toggle and type xinput set-prop "Device_name" "feature_name" <value> ( omit the <> )
+exec_always sudo xinput set-prop "SYNA7DB5:01 06CB:CD41 Touchpad" "libinput Tapping Enabled" 1
+
