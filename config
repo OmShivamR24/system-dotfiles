@@ -36,7 +36,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start krunner (KDE Default application launcher)
-bindsym $mod+d exec krunner 
+bindsym Alt + Space exec krunner 
 #bindsym $mod+d exec dmenu_run
 # alternatives to dmenu are rofi , krunner and many more 
 # There also is the (new) i3-dmenu-desktop which only displays applications
