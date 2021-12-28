@@ -162,10 +162,10 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         # i3status 
-        #status_command i3status
+        status_command i3status
         #position bottom
         #status_command i3status
-        status_command i3blocks
+        #status_command i3blocks
         #position top 
 }
 
