@@ -36,8 +36,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start krunner (KDE Default application launcher)
-bindsym Alt + Space exec dmenu_run 
-#bindsym $mod+d exec dmenu_run
+bindsym Alt + Space exec krunner 
+bindsym $mod+d exec dmenu_run
 # alternatives to dmenu are rofi , krunner and many more 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -162,10 +162,10 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         # i3status 
-        status_command i3status
+        #status_command i3status
         #position bottom
         #status_command i3status
-        #status_command i3blocks
+        status_command i3blocks -c ~/.config/i3/i3blocks/i3blocks.conf
         #position top 
 }
 
