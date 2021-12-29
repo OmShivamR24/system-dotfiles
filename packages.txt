@@ -1,0 +1,17 @@
+baobab
+brightnessctl
+code
+feh
+gimp
+git
+htop
+i3
+i3blocks
+ncdu
+neofetch
+nomacs
+playerctl
+ranger
+scrot
+tldr
+xbacklight
