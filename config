@@ -168,7 +168,7 @@ bar {
         status_command i3blocks -c ~/.config/i3/i3blocks/i3blocks.conf
         #position top 
 }
-
+# Go to colorpicker to get RGB values or HEX codes for a color
 set $bg-color #AACCAA
 
 # Key binding to lock screen 
@@ -184,6 +184,14 @@ exec i3-sensible-terminal
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Media player controls
+# install playerctl 'https://github.com/altdesktop/playerctl/releases' in deb format 
+# and do 'sudo apt install ./<file_name>.deb'
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # Sreen brightness controls
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -205,14 +213,6 @@ bindsym XF86MonBrightnessDown exec sudo --no-startup-id brightnessctl set 10%-
 # 
 
 bindsym XF86TouchpadToggle exec ~/.config/i3/toggletouchpad.sh # toggle touchpad
-
-# Media player controls
-# install playerctl 'https://github.com/altdesktop/playerctl/releases' in deb format 
-# and do 'sudo apt install ./<file_name>.deb'
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
 
 # to enable tapping gestures in i3wm 
 # to get Device Name and features 
