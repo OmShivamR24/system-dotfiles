@@ -4,3 +4,6 @@ i3blocks
 playerctl
 scrot
 xbacklight
+xinput
+pactl
+krunner
