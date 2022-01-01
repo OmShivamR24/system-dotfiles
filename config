@@ -168,13 +168,13 @@ bar {
         #position bottom
         #status_command i3blocks
         status_command i3blocks -c ~/.config/i3/i3blocks/i3blocks.conf
-        position top 
+        #position top 
 }
 
-bar {
-        status_command exec ~/.config/i3/clickEvents/mybar.sh
-        position bottom
-}
+#bar {
+        #status_command exec ~/.config/i3/clickEvents/mybar.sh
+        #position bottom
+#}
 
 # Go to colorpicker to get RGB values or HEX codes for a color
 set $bg-color #AACCAA
