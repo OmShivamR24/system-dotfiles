@@ -241,3 +241,7 @@ bindsym --release Print exec scrot 'screenshot_%Y-%m-%d_%H:%M:%S.png' -e 'mkdir 
 # OSX-like area selection screenshots
 # scrot -s enables to interactively select area for taking snapshots
 bindsym --release Shift+Print exec scrot -s 'screenshot_%Y-%m-%d_%H:%M:%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # Area selection
+
+# cd into important dir
+#bindsym $mod+m exec i3-sensible-terminal && cd m/media/shivamrastogi/Acer/Shivam\ -\ Acer/
+#bindsym $mod+m+n exec i3-sensible-terminal && mcd /media/shivamrastogi/BA40B42840B3E8F1/Shivam/
