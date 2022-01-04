@@ -207,9 +207,11 @@ bindsym XF86AudioPrev exec playerctl previous
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 #https://github.com/jappeace/brightnessctl
-bindsym XF86MonBrightnessUp exec --no-startup-id sudo $PASS brightnessctl set +10%
-bindsym XF86MonBrightnessDown exec --no-startup-id sudo $PASS brightnessctl set 10%-
+#bindsym XF86MonBrightnessUp exec brightness+   #--no-startup-id sudo $PASS brightnessctl set +10%
+#bindsym XF86MonBrightnessDown exec brightness-     #--no-startup-id sudo $PASS brightnessctl set 10%-
 
+#bindsym ctrl+Up exec brightness+   #--no-startup-id sudo $PASS brightnessctl set +10%
+#bindsym ctrl+Down exec brightness-     #--no-startup-id sudo $PASS brightnessctl set 10%-
 
 #bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
 #bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
